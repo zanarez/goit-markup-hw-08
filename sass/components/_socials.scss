@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
+
     &__link {
         width: 44px;
         height: 44px;
@@ -12,6 +13,7 @@
         justify-content: center;
         color: var(--icon-color);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
         &:hover,
         &:focus {
             background-color: var(--accent-color);
@@ -20,12 +22,25 @@
     }
 
     &__icon {
+        width: 20px;
+        height: 20px;
         fill: currentColor;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
+.socials__link:hover svg,
+.socials__link:focus svg {
+    fill: var(--primary-white-color);
+}
+
 .connect {
-    margin-left: 70px;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        margin-left: 70px;
+        margin-bottom: 0;
+    }
 
     &__title {
         display: block;
@@ -35,6 +50,7 @@
     }
     &__list {
         display: flex;
+        justify-content: center;
         gap: 10px;
     }
     &__link {
@@ -48,6 +64,8 @@
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
     &__icon {
+        width: 20px;
+        height: 20px;
         fill: var(--primary-white-color);
     }
 }

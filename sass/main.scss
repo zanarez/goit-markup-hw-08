@@ -1,5 +1,6 @@
 @import './utils/vars';
 @import './utils/hidden';
+@import './utils/mixin';
 
 @import './base/common';
 @import './base/reset';
@@ -12,6 +13,7 @@
 @import './components/nav';
 @import './components/site-nav';
 @import './components/contacts-nav';
+@import './components/mob-menu';
 @import './components/primary-button';
 @import './components/socials';
 @import './components/section-footer';

@@ -26,12 +26,12 @@
                     <a href="./index.html" class="logo"
                         >Web<span class="header--logo">Studio</span></a
                     >
-                    <ul class="site-nav list">
+                    <ul class="site-nav">
                         <li class="site-nav__item">
-                            <a href="./index.html" class="site-nav__link">Студия</a>
+                            <a href="./index.html" class="site-nav__link current">Студия</a>
                         </li>
                         <li class="site-nav__item">
-                            <a href="./portpholio.html" class="site-nav__link current">Портфолио</a>
+                            <a href="./portpholio.html" class="site-nav__link">Портфолио</a>
                         </li>
                         <li class="site-nav__item">
                             <a href="" class="site-nav__link">Контакты</a>
@@ -52,10 +52,62 @@
                             <svg class="contacts-nav__icon" width="12" height="16">
                                 <use href="./images/svg/icons.svg#smartphone"></use>
                             </svg>
-                            +38 096 111 11 11
-                        </a>
+                            +38 096 111 11 11</a
+                        >
                     </li>
                 </ul>
+
+                <button type="button" class="menu-open-btn">
+                    <svg width="40" height="40">
+                        <use href="./images/svg/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+
+                <div class="mob-menu is-hidden">
+                <div class="container">
+                  <div class="mob-menu__top">
+                    <button type="button" class="menu-close-btn">
+                      <svg width="40" height="40">
+                        <use href="./images/svg/icons.svg#icon-close-menu"></use>
+                      </svg>
+                    </button>
+                    <ul class="mob-nav">
+                      <li class="mob-nav__item">
+                        <a href="./index.html" class="mob-nav__link current">Студия</a>
+                      </li>
+      
+                      <li class="mob-nav__item">
+                        <a href="./portfolio.html" class="mob-nav__link">Портфолио</a>
+                      </li>
+      
+                      <li class="mob-nav__item">
+                        <a href="" class="mob-nav__link">Контакты</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="mob-menu__bot">
+                    <ul class="mob-contacts">
+                      <li class="mob-contacts__item">
+                        <a href="tel:+380961111111" class="mob-contacts__phone">
+                          +38 096 111 11 11
+                        </a>
+                      </li>
+        
+                      <li class="mob-contacts__item">
+                        <a href="mailto:info@devstudio.com" class="mob-contacts__mail">
+                          info@devstudio.com
+                        </a>
+                      </li>
+                    </ul>
+        
+                    <ul class="mob-socials">
+                      <li><a href="Instagram" class="mob-socials__link">Instagram</a></li>
+                      <li><a href="Twitter" class="mob-socials__link">Twitter</a>
+                      <li><a href="Facebook" class="mob-socials__link">Facebook</a>
+                      <li><a href="LinkedIn" class="mob-socials__link">LinkedIn</a></li>
+                    </ul>
+                  </div>
             </div>
         </header>
 
@@ -110,12 +162,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/1.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="ноутбук"
-                                    />
+                                    <picture>
+                                    <source srcset="
+                                                ./images/portfolio-projects/card-1.jpg 1x,
+                                                ./images/portfolio-projects/card-1-2x.jpg 2x " media="(min-width: 1200px)" />
+                                    <source srcset="
+                                                ./images/portfolio-projects/card-1-tab.jpg 1x,
+                                                ./images/portfolio-projects/card-1-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                    <source srcset="
+                                                ./images/portfolio-projects/card-1-mob.jpg 1x,
+                                                ./images/portfolio-projects/card-1-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                    <img src="./images/portfolio-projects/card-1-mob.jpg" width="450" height="294" alt="laptop" />
+                                    </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -132,12 +190,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/2.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="люди"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                                    ./images/portfolio-projects/card-2.jpg 1x,
+                                                                    ./images/portfolio-projects/card-2-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                                    ./images/portfolio-projects/card-2-tab.jpg 1x,
+                                                                    ./images/portfolio-projects/card-2-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                                    ./images/portfolio-projects/card-2-mob.jpg 1x,
+                                                                    ./images/portfolio-projects/card-2-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-2-mob.jpg" width="450" height="294" alt="basketball players" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -153,12 +217,21 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/3.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="ресторан"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-3.jpg 1x,
+                                        ./images/portfolio-projects/card-3-2x.jpg 2x "
+                                            media="(min-width: 1200px)" />
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-3-tab.jpg 1x,
+                                        ./images/portfolio-projects/card-3-tab-2x.jpg 2x "
+                                            media="(min-width: 768px)" />
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-3-mob.jpg 1x,
+                                        ./images/portfolio-projects/card-3-mob-2x.jpg 2x "
+                                            media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-3-mob.jpg" width="450" height="294" alt="restaurant logo" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -174,12 +247,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/4.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="наушники"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-4.jpg 1x,
+                                        ./images/portfolio-projects/card-4-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-4-tab.jpg 1x,
+                                        ./images/portfolio-projects/card-4-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                        ./images/portfolio-projects/card-4-mob.jpg 1x,
+                                        ./images/portfolio-projects/card-4-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-4-mob.jpg" width="450" height="294" alt="headphones" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -195,12 +274,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/5.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="коробки"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                        ./images/portfolio-projects/card-5.jpg 1x,
+                                                        ./images/portfolio-projects/card-5-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                        ./images/portfolio-projects/card-5-tab.jpg 1x,
+                                                        ./images/portfolio-projects/card-5-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                        ./images/portfolio-projects/card-5-mob.jpg 1x,
+                                                        ./images/portfolio-projects/card-5-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-5-mob.jpg" width="450" height="294" alt="boxes" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -216,12 +301,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/6.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="монитор"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-6.jpg 1x,
+                                                                        ./images/portfolio-projects/card-6-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-6-tab.jpg 1x,
+                                                                        ./images/portfolio-projects/card-6-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-6-mob.jpg 1x,
+                                                                        ./images/portfolio-projects/card-6-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-6-mob.jpg" width="450" height="294" alt="monitor" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -237,12 +328,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/7.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="книги"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-7.jpg 1x,
+                                                                        ./images/portfolio-projects/card-7-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-7-tab.jpg 1x,
+                                                                        ./images/portfolio-projects/card-7-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-7-mob.jpg 1x,
+                                                                        ./images/portfolio-projects/card-7-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-7-mob.jpg" width="450" height="294" alt="book" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -258,12 +355,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/8.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="лаб"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-8.jpg 1x,
+                                                                        ./images/portfolio-projects/card-8-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-8-tab.jpg 1x,
+                                                                        ./images/portfolio-projects/card-8-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-8-mob.jpg 1x,
+                                                                        ./images/portfolio-projects/card-8-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-8-mob.jpg" width="450" height="294" alt="label" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -279,12 +382,18 @@
                         <li class="cards__item">
                             <a href="" class="cards__link card">
                                 <div class="card__wrap">
-                                    <img
-                                        src="./portpholio/9.jpg"
-                                        width="370"
-                                        height="294"
-                                        alt="бизнес"
-                                    />
+                                    <picture>
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-9.jpg 1x,
+                                                                        ./images/portfolio-projects/card-9-2x.jpg 2x " media="(min-width: 1200px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-9-tab.jpg 1x,
+                                                                        ./images/portfolio-projects/card-9-tab-2x.jpg 2x " media="(min-width: 768px)" />
+                                        <source srcset="
+                                                                        ./images/portfolio-projects/card-9-mob.jpg 1x,
+                                                                        ./images/portfolio-projects/card-9-mob-2x.jpg 2x " media="(min-width: 320px)" />
+                                        <img src="./images/portfolio-projects/card-9-mob.jpg" width="450" height="294" alt="bussines" />
+                                        </picture>
                                     <p class="card__text">
                                         Технокряк это современная площадка распространения
                                         коронавируса. Компании используют эту платформу для
@@ -303,88 +412,88 @@
         </main>
 
         <footer class="section-footer">
-            <div class="container footer">
-                <div>
-                    <a href="./index.html" class="footer__logo logo"
-                        >Web<span class="footer--logo">Studio</span></a
-                    >
-                    <address>
-                        <ul class="contacts__footer">
-                            <li class="contacts-footer__item">
-                                <a
-                                    href="https://goo.gl/maps/aXf4JFMNbya1GtzN9"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="contacts__address"
-                                    >г. Киев, пр-т Леси Украинки, 26</a
-                                >
-                            </li>
+          <div class="container footer">
+            <div class="footer__tablet">
+              <div class="footer__nav">
+                <a href="./index.html" class="footer__logo logo">Web<span class="footer--logo">Studio</span></a>
 
-                            <li class="contacts-footer__item">
-                                <a href="mailto:info@devstudio.com" class="contacts-footer__mail"
-                                    >info@devstudio.com</a
-                                >
-                            </li>
+                <address>
+                  <ul class="contacts">
+                    <li>
+                      <a
+                        href="https://goo.gl/maps/aXf4JFMNbya1GtzN9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contacts__address"
+                        >г. Киев, пр-т Леси Украинки, 26</a
+                      >
+                    </li>
 
-                            <li class="contacts-footer__item">
-                                <a href="tel:+380961111111" class="contacts-footer__phone"
-                                    >+38 096 111 11 11</a
-                                >
-                            </li>
-                        </ul>
-                    </address>
-                </div>
+                    <li>
+                      <a href="mailto:info@devstudio.com" class="contacts__mail">info@devstudio.com</a>
+                    </li>
 
-                <div class="connect">
-                    <b class="connect__title">присоединяйтесь</b>
-                    <ul class="connect__list">
-                        <li class="connect__item">
-                            <a href="" class="connect__link">
-                                <svg class="connect__icon" width="20" height="20">
-                                    <use href="./images/svg/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
+                    <li>
+                      <a href="tel:+380961111111" class="contacts__phone">+38 096 111 11 11</a>
+                    </li>
+                  </ul>
+                </address>
+              </div>
 
-                        <li class="connect__item">
-                            <a href="" class="connect__link">
-                                <svg class="connect__icon" width="20" height="20">
-                                    <use href="./images/svg/icons.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
+              <div class="connect">
+                <b class="connect__title">присоединяйтесь</b>
 
-                        <li class="connect__item">
-                            <a href="" class="connect__link">
-                                <svg class="connect__icon" width="20" height="20">
-                                    <use href="./images/svg/icons.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
+                <ul class="connect__list">
+                  <li class="connect__item">
+                    <a href="instagram-link" class="connect__link">
+                      <svg class="connect__icon" width="20" height="20">
+                        <use href="./images/svg/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
 
-                        <li class="connect__item">
-                            <a href="" class="connect__link">
-                                <svg class="connect__icon" width="20" height="20">
-                                    <use href="./images/svg/icons.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                  <li class="connect__item">
+                    <a href="twitter-link" class="connect__link">
+                      <svg class="connect__icon" width="20" height="20">
+                        <use href="./images/svg/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
 
-                <div class="footer-form">
-                    <b class="footer-form__title">Подпишитесь на рассылку</b>
-                    <form class="form">
-                        <input type="text" name="email" placeholder="E-mail" id="email" />
-                        <button type="submit" class="footer-form__btn">
-                            <span>Подписаться</span>
-                            <svg class="footer-form__icon" width="24" height="24">
-                                <use href="./images/svg/icons.svg#icon-send"></use>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
+                  <li class="connect__item">
+                    <a href="facebook-link" class="connect__link">
+                      <svg class="connect__icon" width="20" height="20">
+                        <use href="./images/svg/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li class="connect__item">
+                    <a href="linkedin-link" class="connect__link">
+                      <svg class="connect__icon" width="20" height="20">
+                        <use href="./images/svg/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
+            
+            <div class="footer-form">
+              <b class="footer-form__title">Подпишитесь на рассылку</b>
+              <form class="form">
+                <input type="text" name="email" placeholder="E-mail" id="email" />
+                <button type="submit" class="footer-form__btn">
+                  <span>Подписаться</span>
+                  <svg class="footer-form__icon" width="24" height="24">
+                    <use href="./images/svg/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
         </footer>
+
+        <script src="./js/menu.js"></script>
     </body>
 </html>

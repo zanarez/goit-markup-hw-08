@@ -4,18 +4,41 @@
 
 .team {
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
     gap: 30px;
+
+    @include desktop {
+        margin-top: 50px;
+    }
 
     &__item {
         background-color: var(--primary-white-color);
         box-shadow: var(--shadows);
         border-radius: 0px 0px 4px 4px;
+        width: 100%;
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+        @include desktop {
+            width: calc((100% - 90px) / 4);
+        }
+        @include tablet {
+            width: calc((100% - 30px) / 2);
+        }
+        @include desktop {
+            width: calc((100% - 90px) / 4);
+        }
     }
 }
 
 .member {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+
+    @include desktop {
+        padding-bottom: 30px;
+    }
 
     &__name {
         margin-bottom: 10px;
